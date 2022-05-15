@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Medical Guide</title>
+    <meta name="keywords" content="">
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	{% load static %}
+	<link rel="icon" type="image/png" href="{% static 'images/favicon-medical.png' %}">
+	
+    <!--main file-->
+	<link href="{% static 'css/medical-guide.css' %}" rel="stylesheet" type="text/css">
+    
+    <!--Medical Guide Icons-->
+	<link href="{% static 'fonts/medical-guide-icons.css' %}" rel="stylesheet" type="text/css">
+	
+	<!-- Default Color-->
+	<link href="{% static 'css/default-color.css' %}" rel="stylesheet" id="color"  type="text/css">
+    
+    <!--bootstrap-->
+	<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+    
+    <!--Dropmenu-->
+	<link href="{% static 'css/dropmenu.css' %}" rel="stylesheet" type="text/css">
+    
+	<!--Sticky Header-->
+	<link href="{% static 'css/sticky-header.css' %}" rel="stylesheet" type="text/css">
+	
+	<!--revolution-->
+	<link href="{% static 'css/style.css' %} " rel="stylesheet" type="text/css">    
+    <link href="{% static 'css/settings.css' %}" rel="stylesheet" type="text/css">    
+    <link href="{% static 'css/extralayers.css' %}" rel="stylesheet" type="text/css">    
+   
+    <!--Accordion-->
+    <link href="{% static 'css/accordion.css' %}" rel="stylesheet" type="text/css">
+     
+    <!--tabs-->
+	<link href="{% static 'css/tabs.css' %}" rel="stylesheet" type="text/css">    
+   
+    <!--Owl Carousel-->
+	<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet" type="text/css">    
+
+	<!--Portfolio-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cubeportfolio.min.css' %}">
+
+    <!-- Mobile Menu -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.mmenu.all.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
+	<!--PieChart-->
+	<link href="{% static 'css/piechart-style.css' %}" rel="stylesheet" type="text/css">
+	<!--PreLoade r-->  
+	<link href="{% static 'css/loader.css' %}" rel="stylesheet" type="text/css"> 
+   
+</head>
+  <body>
+    
+  <div id="wrap">
+   
+   <!--Start PreLoader-->
+   <!-- <div id="preloader">
+		<div id="status">&nbsp;</div>
+		<div class="loader">
+			<h1>Loading...</h1>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	End PreLoader  -->
+
+ 
+   <!--Start Header-->
+   
+   <div id="header-2">
+   
+   <header class="header header2">
+		<div class="container">
+   		
+   		
+        <div class="row">
+        	
+            <div class="col-md-3">
+            	<a href="index.html" class="logo"><img src="{% static 'images/logoMed.png' %}" alt=""></a>
+            </div>
+            
+            <div class="col-md-9">
+            	
+                
+                <nav class="menu-2">
+            	<ul class="nav wtf-menu">
+                	<li class="item-select parent"><a href="{% url 'inicio' %}">Inicio</a>
+					
+					</li>
+					
+                    <li class="parent"><a href="{% url 'acerca' %}">Acerca de </a>
+					
+					</li>
+					
+                    <li class="parent"><a href="{% url 'profesionales' %}">Profesionales</a>
+                    	
+                    </li>
+					<li class="parent"><a href="{% url 'receta' %}">Consultar</a>
+                    	
+                    </li>
+					
+                    
+					
+                    <li class="parent"><a href="{% url 'galeria' %}">Galeria</a>                     						
+						
+						
+					</li>
+					<li class="parent"> <a href="{% url 'testimonio' %}">Testimonios</a>
+					</li>				
+                </ul>
+                </nav>
+                	
+            </div>
+            
+        </div>
+        
+        
+		</div>	
+    </header>
+	</div>
+	
+   <!--End Header-->
+	
+	
+	<!-- Mobile Menu Start -->
+	<div class="container">
+    <div id="page">
+			<header class="header">
+				<a href="#menu"></a>
+				
+			</header>
+			
+			<nav id="menu">
+				<ul>
+					<li class="select"><a href="#.">Home</a>
+                    	
+                    </li>
+					<li><a href="#.">About us</a>
+                    	
+                    </li>
+                    <li><a href="#.">Pages</a>
+                    
+                    </li>
+                    
+                    <li><a href="procedures.html">Procedures</a></li>
+					
+					<li><a href="#.">Gallery</a>
+                    	
+						<ul>
+                        	<li><a href="#.">Simple Gallery</a>
+                            	
+                            </li>
+							
+							<li><a href="#.">Nimble Gallery</a>
+                            	
+                            </li>
+                        </ul>
+						
+                    </li>
+                    
+                    
+                    <li><a href="#.">News Posts</a>
+                    
+                    </li>
+                    
+					<li><a href="shop.html">Shop</a></li>
+					
+					<li><a href="#.">Contact Us</a>
+                    	
+                    </li>
+					
+				</ul>
+                
+                
+			</nav>
+		</div>
+		</div>
+    <!-- Mobile Menu End -->
+	
+	
+<div class="container">
+<div class="time-table-sec">
+<ul id="accordion2" class="accordion2">
+<li>
+<ul class="submenu time-table">
+<!-- <li class="tit"><h5>Working Time</h5></li>
+<li><span class="day">Monday - Friday</span> <span class="divider">-</span> <span class="time">8.00 - 16.00</span></li>
+<li><span class="day">Saturday</span> <span class="divider">-</span> <span class="time">9.15 - 17.00</span></li>
+<li><span class="day">Sunday</span> <span class="divider">-</span> <span class="time">9.45 - 15.00</span></li> -->
+</ul>
+<div class="link"><img class="time-tab" src="images/timetable-menu.png" alt=""></div>
+
+</li>
+</ul>
+</div>
+</div>
+
+    
+	
+{% block content %}    {% endblock %}
+   
+   
+   
+   
+   <!--Start Footer-->
+   <footer class="footer" id="footer">
+   		<div class="container">
+        	<div class="row">
+            	<div class="col-md-12">
+                	<div class="emergency">
+                    	<i class="icon-phone5"></i>
+                        <span class="text">Para casos de emergencia</span>
+                        <span class="number">1-302-403-1111</span>
+                        <img src="{% static 'images/emergency-divider.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="main-footer">
+            	<div class="row">
+                	
+                    <div class="col-md-3">
+                    	
+                        <div class="useful-links">
+                        	<div class="title">
+                            	<h5>Med Hist</h5>
+                            </div>
+                            
+                            <div class="detail">
+                            	<!-- <ul>
+                                	
+                                	<li><a href="#.">Inicio</a></li>
+                                    <li><a href="#.">Acerca de</a></li>
+                                    <li><a href="#.">Servicios</a></li>
+                                    <li><a href="#.">Areas</a></li>
+                                    <li><a href="#.">Timetable</a></li>
+                                    <li><a href="#.">Why Us</a></li>
+                                    <li><a href="#.">Specilaties</a></li>
+                                    <li><a href="#.">Contact Us</a></li>
+                                    <li><a href="#.">Events</a></li>
+                                    
+                                </ul> -->
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-3">
+                    	
+                        
+                        	<div class="title">
+                            	<h5>DESARROLLO</h5>
+                            </div>
+                            
+                            <div class="detail">
+                            	
+                                <!-- <div class="tweets">
+                                	
+                                    <div class="icon">
+                                    	<i class="icon-yen"></i>
+                                    </div>
+                                    
+                                    <div class="text">
+                                    	<p><a href="#.">@Rotography</a> Please kindly use Support Forum: <a href="#.">Medical.co.uk</a></p>
+                                        <span>3 days ago</span>
+                                    </div>
+                                    
+                                </div>
+                                 -->
+                                <div class="tweets">
+                                	
+                                    <div class="icon">
+                                    	<i class="icon-yen"></i>
+                                    </div>
+                                    
+                                    <div class="text">
+                                    	<p><span>acrraunzda@gmail.com <br/>
+											adanpm0123@gmail.com.</span> <a href="#.">@Hack</a></p>
+                                        <span>actualizado hace una semana</span>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        
+                        
+                    </div>
+                    <div class="col-md-3">
+                    	
+                        <div class="newsletter">
+                        	<div class="title">
+                            	<h5>CONTACTO STAFF</h5>
+								
+                            </div>
+                            
+                            <div class="detail">
+                            	
+                                    <div class="signup-text">
+                                    	<i class="icon-dollar"></i>
+                                		<span>Envianos un mensaje.</span>
+                                    </div>
+                                    
+                                    <div class="form">
+                                    <!-- <p class="subscribe_success" id="subscribe_success" style="display:none;"></p>
+                                    <p class="subscribe_error" id="subscribe_error" style="display:none;"></p>
+                                    
+                                    <form name="subscribe_form" id="subscribe_form" method="post" action="#" onSubmit="return false">
+                                    	<input type="text" data-delay="300" placeholder="Your Name" name="subscribe_name" id="subscribe_name" onKeyPress="removeChecks();" class="input" >
+                                    	<input type="text" data-delay="300" placeholder="Email Address" name="subscribe_email" id="subscribe_email" onKeyPress="removeChecks();" class="input" >
+                                        <input name="Subscribe" type="submit" value="Subscribe" onClick="validateSubscription();">
+                                    </form> -->
+                                    </div>
+                                    
+                                </div>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-3">
+                    	
+                        <div class="get-touch">
+                        	<div class="title">
+                            	<h5>ORGANIZACION</h5>
+                            </div>
+                            
+                            <div class="detail">
+                            	<div class="get-touch">
+                                	
+                                    
+                                    <span class="text">hackthon por la salud</span>
+                                    
+                                    
+                                    <!-- <ul>
+                                    	<li><i class="icon-location"></i> <span>Medical LLahore</span></li>
+                                        <li><i class="icon-phone4"></i> <span>(DDDDW</span></li>
+                                        <li><a href="#."><i class="icon-dollar"></i> <span>heCJJS@</span></a></li>
+                                    </ul>  -->
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="footer-bottom">
+        	<div class="container">
+            	<div class="row">
+                	
+                    <div class="col-md-6">
+                    	<span class="copyrights">Copyright &copy; RedOsmo. All right reserved.</span>
+                    </div>
+                    
+                    <div class="col-md-6">
+                    	<!-- <div class="social-icons">
+                        	<a href="#." class="fb"><i class="icon-euro"></i></a>
+                            <a href="#." class="tw"><i class="icon-yen"></i></a>
+                            <a href="#." class="gp"><i class="icon-google-plus"></i></a>
+                            <a href="#." class="vimeo"><i class="icon-vimeo4"></i></a>
+                        </div> -->
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+   </footer>
+   <!--End Footer-->
+
+
+
+<a href="#0" class="cd-top"></a>
+  </div>
+
+
+
+
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+
+<!-- SMOOTH SCROLL -->	
+<script type="text/javascript" src="{% static 'js/scroll-desktop.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/scroll-desktop-smooth.js' %}"></script>
+
+<!-- START REVOLUTION SLIDER -->	
+<script type="text/javascript" src="{% static 'js/jquery.themepunch.revolution.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.themepunch.tools.min.js' %}"></script>
+
+
+<!-- Date Picker and input hover -->
+<script type="text/javascript" src="{% static 'js/classie.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/jquery-ui-1.10.3.custom.js' %}"></script>
+
+<!-- Fun Facts Counter -->
+<script type="text/javascript" src="{% static 'js/counter.js' %}"></script>
+
+
+<!-- Welcome Tabs -->	
+<script type="text/javascript" src="{% static 'js/tabs.js' %}"></script>
+
+
+<!-- All Carousel -->
+<script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>
+
+<!-- Mobile Menu -->
+<script type="text/javascript" src="{% static 'js/jquery.mmenu.min.all.js' %}"></script>
+
+<!-- All Scripts -->
+<script type="text/javascript" src="{% static 'js/custom.js' %}"></script> 
+
+
+<!-- Gallery Portfolio -->	
+<script type="text/javascript" src="{% static 'js/jquery.cubeportfolio.min.js'  %}"></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+<!-- Pie Chart -->
+<script type="text/javascript" src="{% static 'js/piechart.min.js' %}"></script>
+<script type="text/javascript">
+$('#pie-charts').waypoint(function(direction) {			
+$('.chart').easyPieChart({
+easing: 'easeOutBounce',
+onStep: function(from, to, percent) {
+$(this.el).find('.percent').text(Math.round(percent));
+}
+});
+}, {
+offset: function() {
+return $.waypoints('viewportHeight') - $(this).height() + 100;
+}
+});
+</script>
+
+
+
+
+
+
+<!-- Revolution Slider -->	
+<script type="text/javascript">
+jQuery('.tp-banner').show().revolution(
+{
+dottedOverlay:"none",
+delay:16000,
+startwidth:1170,
+startheight:720,
+hideThumbs:200,
+
+thumbWidth:100,
+thumbHeight:50,
+thumbAmount:5,
+
+navigationType:"nexttobullets",
+navigationArrows:"solo",
+navigationStyle:"preview",
+
+touchenabled:"on",
+onHoverStop:"on",
+
+swipe_velocity: 0.7,
+swipe_min_touches: 1,
+swipe_max_touches: 1,
+drag_block_vertical: false,
+
+parallax:"mouse",
+parallaxBgFreeze:"on",
+parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+
+keyboardNavigation:"off",
+
+navigationHAlign:"center",
+navigationVAlign:"bottom",
+navigationHOffset:0,
+navigationVOffset:20,
+
+soloArrowLeftHalign:"left",
+soloArrowLeftValign:"center",
+soloArrowLeftHOffset:20,
+soloArrowLeftVOffset:0,
+
+soloArrowRightHalign:"right",
+soloArrowRightValign:"center",
+soloArrowRightHOffset:20,
+soloArrowRightVOffset:0,
+
+shadow:0,
+fullWidth:"on",
+fullScreen:"off",
+
+spinner:"spinner4",
+
+stopLoop:"off",
+stopAfterLoops:-1,
+stopAtSlide:-1,
+
+shuffle:"off",
+
+autoHeight:"off",						
+forceFullWidth:"off",						
+
+
+
+hideThumbsOnMobile:"off",
+hideNavDelayOnMobile:1500,						
+hideBulletsOnMobile:"off",
+hideArrowsOnMobile:"off",
+hideThumbsUnderResolution:0,
+
+hideSliderAtLimit:0,
+hideCaptionAtLimit:0,
+hideAllCaptionAtLilmit:0,
+startWithSlide:0,
+videoJsPath:"rs-plugin/videojs/",
+fullScreenOffsetContainer: ""	
+});
+</script>
+
+
+</body>
+</html>
